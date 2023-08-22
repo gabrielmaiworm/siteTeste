@@ -1,0 +1,49 @@
+body {
+    background-image: url('./foto_background.jpeg');
+    background-size: contain;
+    background-position: center;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Impede a rolagem da página */
+}
+
+.container {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h2 {
+    font-size: 24px;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: white;
+    color: blue;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#btnNo {
+    position: relative;
+}
+
+#btnNo:hover {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+}
