@@ -1,24 +1,54 @@
-const btnNo = document.getElementById('btnNo');
-
-btnNo.addEventListener('mouseover', () => {
-    const btnWidth = btnNo.offsetWidth;
-    const btnHeight = btnNo.offsetHeight;
-    const maxX = window.innerWidth - btnWidth;
-    const maxY = window.innerHeight - btnHeight;
-    const centerX = window.innerWidth / 2 - btnWidth / 2;
-    const centerY = window.innerHeight / 2 - btnHeight / 2;
-
-    const randomX = Math.floor(Math.random()*400)
-    const randomY = Math.floor(Math.random()*300)
-
-    btnNo.style.left = `${randomX}px`;
-    btnNo.style.top = `${randomY}px`;
-});
-
 const btnYes = document.getElementById('btnYes');
+const btnNo = document.getElementById('btnNo');
+const btnPopupYes = document.getElementById('btnPopupYes');
+const btnPopupNo = document.getElementById('btnPopupNo');
+const audioPlayer = document.getElementById('audioPlayer');
+const phrase = document.getElementById('phrase');
+const popupText = document.getElementById('popupText');
+const popupOverlay = document.getElementById('popupOverlay');
+const container = document.getElementById('container');
+
+let isFirstSimClick = true;
 
 btnYes.addEventListener('click', () => {
-    const confettiSettings = { target: 'confetti-canvas', max: 150 };
-    const confetti = new ConfettiGenerator(confettiSettings);
-    confetti.render();
+    if (isFirstSimClick) {
+        audioPlayer.play();
+        changeContent();
+        isFirstSimClick = false;
+    }
 });
+
+btnNo.addEventListener('click', () => {
+    openPopup();
+});
+
+function changeContent() {
+    phrase.textContent = "AEEEEEEEEEEEEEE É DO BRASILLLLLLLL";
+}
+
+btnPopupYes.addEventListener('click', () => {
+    popupText.textContent = 'Você tem certeza da certeza??';
+    btnPopupYes.style.display = 'none';
+    btnPopupNo.textContent = 'Hmm se ferrou, não tem como recusar :)';
+});
+
+btnPopupNo.addEventListener('click', () => {
+    closePopup();
+});
+
+function changePhrase() {
+    phrase.textContent = "AEEEEEEEEEEEEEE É DO BRASILLLLLLLL";
+}
+
+function openPopup() {
+    popupText.textContent = 'Você tem certeza?';
+    btnPopupYes.style.display = 'block';
+    btnPopupNo.textContent = 'Não';
+    popupOverlay.style.display = 'flex';
+}
+
+function closePopup() {
+    popupOverlay.style.display = 'none';
+}
+
+// Restante do seu código...

@@ -8,11 +8,23 @@
     <title>Vamo de rolezinho?</title>
 </head>
 <body>
-    <div class="container">
-        <h2>Vamo de rolezinho?</h2>
+    <audio id="audioPlayer" preload="auto">
+        <source src="./vitoria.mp3" type="audio/mpeg">
+    </audio>
+    <div class="container" id="container">
+        <h2 id="phrase">Vamo de rolezinho?</h2>
         <div class="button-container">
             <button class="btn" id="btnYes">Sim</button>
             <button class="btn" id="btnNo">Não</button>
+        </div>
+    </div>
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <p id="popupText">Você tem certeza?</p>
+            <div class="button-container">
+                <button class="btn-popup" id="btnPopupYes">Sim</button>
+                <button class="btn-popup" id="btnPopupNo">Não</button>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
