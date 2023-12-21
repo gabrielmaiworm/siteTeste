@@ -23,13 +23,13 @@ btnNo.addEventListener('click', () => {
 });
 
 function changeContent() {
-    phrase.textContent = "AEEEEEEEEEEEEEE É DO BRASILLLLLLLL";
+    phrase.textContent = "Vish, a friendzone...";
 }
 
 btnPopupYes.addEventListener('click', () => {
-    popupText.textContent = 'Você tem certeza da certeza??';
+    popupText.textContent = 'BELEZAAA, NÃO QUERO MAIS SABER TAMBÉM';
     btnPopupYes.style.display = 'none';
-    btnPopupNo.textContent = 'Hmm se ferrou, não tem como recusar :)';
+    btnPopupNo.textContent = 'Tá bom, vou aceitar';
 });
 
 btnPopupNo.addEventListener('click', () => {
@@ -37,11 +37,11 @@ btnPopupNo.addEventListener('click', () => {
 });
 
 function changePhrase() {
-    phrase.textContent = "AEEEEEEEEEEEEEE É DO BRASILLLLLLLL";
+    phrase.textContent = "Vish, a friendzone...";
 }
 
 function openPopup() {
-    popupText.textContent = 'Você tem certeza?';
+    popupText.textContent = 'Meu deus Lorena, certeza mesmo?????';
     btnPopupYes.style.display = 'block';
     btnPopupNo.textContent = 'Não';
     popupOverlay.style.display = 'flex';
